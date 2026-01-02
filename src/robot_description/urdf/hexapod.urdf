@@ -1,0 +1,1414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="hexapod">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-5.66285111708425E-06 2.39925924211176E-06 0.0161961871370444"
+        rpy="0 0 0" />
+      <mass
+        value="0.786295693203365" />
+      <inertia
+        ixx="0.000787785735234733"
+        ixy="8.85714758462769E-09"
+        ixz="2.40410128168524E-08"
+        iyy="0.000864976152289171"
+        iyz="1.37831333939479E-08"
+        izz="0.00156986494698497" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_coxa_link">
+    <inertial>
+      <origin
+        xyz="0.040344 0.042218 -0.031064"
+        rpy="0 0 0" />
+      <mass
+        value="0.086385" />
+      <inertia
+        ixx="2.3662E-05"
+        ixy="-2.2432E-06"
+        ixz="-1.3369E-07"
+        iyy="2.3556E-05"
+        iyz="-9.2535E-08"
+        izz="1.639E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_left_coxa_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_left_coxa_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_coxa_joint"
+    type="revolute">
+    <origin
+      xyz="0.06114 0.061135 0.047119"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_coxa_link" />
+    <axis
+      xyz="-0.0001863 -7.2511E-05 -1" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_left_femur_link">
+    <inertial>
+      <origin
+        xyz="0.04135 0.032959 0.032957"
+        rpy="0 0 0" />
+      <mass
+        value="0.031609" />
+      <inertia
+        ixx="1.7355E-05"
+        ixy="-3.1461E-08"
+        ixz="-1.6713E-05"
+        iyy="3.7927E-05"
+        iyz="3.7647E-08"
+        izz="2.3659E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_left_femur_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_left_femur_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_femur_joint"
+    type="revolute">
+    <origin
+      xyz="0.071347 0.027719 -0.021317"
+      rpy="-0.00010412 0.00010671 0.79764" />
+    <parent
+      link="front_left_coxa_link" />
+    <child
+      link="front_left_femur_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_left_tibia_link">
+    <inertial>
+      <origin
+        xyz="0.015683 0.032124 -0.033451"
+        rpy="0 0 0" />
+      <mass
+        value="0.095402" />
+      <inertia
+        ixx="7.414E-05"
+        ixy="-1.3407E-08"
+        ixz="2.376E-05"
+        iyy="8.8702E-05"
+        iyz="2.2794E-08"
+        izz="2.4896E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_left_tibia_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_left_tibia_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_tibia_joint"
+    type="revolute">
+    <origin
+      xyz="0.083521 0 0.06927"
+      rpy="-9.4214E-05 9.656E-05 5.5354E-05" />
+    <parent
+      link="front_left_femur_link" />
+    <child
+      link="front_left_tibia_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_left_foot_link">
+    <inertial>
+      <origin
+        xyz="1.8442E-10 -1.1403E-09 -0.00013914"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010269" />
+      <inertia
+        ixx="1.6656E-08"
+        ixy="9.5965E-15"
+        ixz="-9.2478E-16"
+        iyy="1.6656E-08"
+        iyz="5.7294E-15"
+        izz="1.7246E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_left_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_left_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.048031 0.031527 -0.1543"
+      rpy="-0.063104 0.061486 -0.80158" />
+    <parent
+      link="front_left_tibia_link" />
+    <child
+      link="front_left_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="middle_left_coxa_link">
+    <inertial>
+      <origin
+        xyz="0.0024295 0.058351 -0.031053"
+        rpy="0 0 0" />
+      <mass
+        value="0.086385" />
+      <inertia
+        ixx="2.584E-05"
+        ixy="-2.3471E-07"
+        ixz="-3.8593E-08"
+        iyy="2.1377E-05"
+        iyz="-1.5687E-07"
+        izz="1.639E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_left_coxa_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_left_coxa_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_left_coxa_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.086462 0.047119"
+      rpy="-0.00018301 8.0459E-05 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="middle_left_coxa_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_left_femur_link">
+    <inertial>
+      <origin
+        xyz="0.033591 0.032958 0.040835"
+        rpy="0 0 0" />
+      <mass
+        value="0.031609" />
+      <inertia
+        ixx="2.4427E-05"
+        ixy="-3.8022E-08"
+        ixz="-1.655E-05"
+        iyy="3.7927E-05"
+        iyz="3.1013E-08"
+        izz="1.6587E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_left_femur_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_left_femur_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_left_femur_joint"
+    type="revolute">
+    <origin
+      xyz="0.035286 0.067928 -0.021301"
+      rpy="-0.00017502 0.001814 1.5188" />
+    <parent
+      link="middle_left_coxa_link" />
+    <child
+      link="middle_left_femur_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_left_tibia_link">
+    <inertial>
+      <origin
+        xyz="0.001575 0.032124 -0.036912"
+        rpy="0 0 0" />
+      <mass
+        value="0.095402" />
+      <inertia
+        ixx="8.3724E-05"
+        ixy="-3.5837E-09"
+        ixz="-8.1935E-07"
+        iyy="8.8702E-05"
+        iyz="2.62E-08"
+        izz="1.5311E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_left_tibia_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_left_tibia_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_left_tibia_joint"
+    type="revolute">
+    <origin
+      xyz="0.06729 0 0.085125"
+      rpy="-8.855E-05 0.0017051 0.00013407" />
+    <parent
+      link="middle_left_femur_link" />
+    <child
+      link="middle_left_tibia_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_left_foot_link">
+    <inertial>
+      <origin
+        xyz="5.0957E-09 -2.4354E-09 -0.00013914"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010269" />
+      <inertia
+        ixx="1.6656E-08"
+        ixy="3.0429E-14"
+        ixz="-4.262E-15"
+        iyy="1.6656E-08"
+        iyz="3.8937E-15"
+        izz="1.7246E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_left_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_left_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_left_foot_joint"
+    type="fixed">
+    <origin
+      xyz="-0.015167 0.031527 -0.16089"
+      rpy="-0.48384 0.00019266 -1.5708" />
+    <parent
+      link="middle_left_tibia_link" />
+    <child
+      link="middle_left_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_left_coxa_link">
+    <inertial>
+      <origin
+        xyz="-0.029422 0.050449 -0.031052"
+        rpy="0 0 0" />
+      <mass
+        value="0.086385" />
+      <inertia
+        ixx="2.4756E-05"
+        ixy="1.9286E-06"
+        ixz="5.1727E-08"
+        iyy="2.2462E-05"
+        iyz="-1.5307E-07"
+        izz="1.639E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_left_coxa_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_left_coxa_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_coxa_joint"
+    type="revolute">
+    <origin
+      xyz="-0.061135 0.06114 0.047119"
+      rpy="-0.0001863 -7.2511E-05 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_coxa_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rear_left_femur_link">
+    <inertial>
+      <origin
+        xyz="0.02126 0.033564 0.049623"
+        rpy="0 0 0" />
+      <mass
+        value="0.03096" />
+      <inertia
+        ixx="3.2689E-05"
+        ixy="-4.4726E-08"
+        ixz="-1.1852E-05"
+        iyy="3.7896E-05"
+        iyz="2.0236E-08"
+        izz="8.2934E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_left_femur_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_left_femur_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_femur_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0069169 0.076233 -0.021302"
+      rpy="-0.00013328 -0.00038067 2.0884" />
+    <parent
+      link="rear_left_coxa_link" />
+    <child
+      link="rear_left_femur_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rear_left_tibia_link">
+    <inertial>
+      <origin
+        xyz="0.017478 0.032124 -0.032549"
+        rpy="0 0 0" />
+      <mass
+        value="0.095402" />
+      <inertia
+        ixx="7.1416E-05"
+        ixy="-1.4627E-08"
+        ixz="2.6292E-05"
+        iyy="8.8702E-05"
+        iyz="2.2034E-08"
+        izz="2.762E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_left_tibia_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_left_tibia_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_tibia_joint"
+    type="revolute">
+    <origin
+      xyz="0.040782 0 0.10055"
+      rpy="-9.2524E-05 -0.0001625 4.4556E-05" />
+    <parent
+      link="rear_left_femur_link" />
+    <child
+      link="rear_left_tibia_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rear_left_foot_link">
+    <inertial>
+      <origin
+        xyz="1.0887E-09 -3.974E-10 -0.00013914"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010269" />
+      <inertia
+        ixx="1.6656E-08"
+        ixy="1.9903E-14"
+        ixz="-5.4631E-15"
+        iyy="1.6656E-08"
+        iyz="1.9957E-15"
+        izz="1.7246E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_left_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_left_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.056346 0.031527 -0.15146"
+      rpy="-0.033706 0.00019667 -1.5708" />
+    <parent
+      link="rear_left_tibia_link" />
+    <child
+      link="rear_left_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_right_coxa_link">
+    <inertial>
+      <origin
+        xyz="0.0458 -0.036227 -0.031064"
+        rpy="0 0 0" />
+      <mass
+        value="0.086385" />
+      <inertia
+        ixx="2.314E-05"
+        ixy="2.1942E-06"
+        ixz="-1.0461E-07"
+        iyy="2.4078E-05"
+        iyz="1.2447E-07"
+        izz="1.639E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_right_coxa_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_right_coxa_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_coxa_joint"
+    type="revolute">
+    <origin
+      xyz="0.06114 -0.061135 0.047119"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_coxa_link" />
+    <axis
+      xyz="7.2511E-05 -0.0001863 1" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_right_femur_link">
+    <inertial>
+      <origin
+        xyz="0.0089189 0.033563 0.053244"
+        rpy="0 0 0" />
+      <mass
+        value="0.03096" />
+      <inertia
+        ixx="3.6771E-05"
+        ixy="-4.811E-08"
+        ixz="-4.9193E-06"
+        iyy="3.7896E-05"
+        iyz="9.9323E-09"
+        izz="4.2106E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_right_femur_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_right_femur_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_femur_joint"
+    type="revolute">
+    <origin
+      xyz="0.034257 -0.068448 -0.021317"
+      rpy="-0.00010412 -8.4145E-05 -0.67968" />
+    <parent
+      link="front_right_coxa_link" />
+    <child
+      link="front_right_femur_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_right_tibia_link">
+    <inertial>
+      <origin
+        xyz="0.018678 0.032124 -0.031876"
+        rpy="0 0 0" />
+      <mass
+        value="0.095402" />
+      <inertia
+        ixx="6.9398E-05"
+        ixy="-1.5437E-08"
+        ixz="2.7849E-05"
+        iyy="8.8702E-05"
+        iyz="2.1472E-08"
+        izz="2.9638E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_right_tibia_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_right_tibia_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_tibia_joint"
+    type="revolute">
+    <origin
+      xyz="0.015841 0 0.10735"
+      rpy="-9.1062E-05 -7.3584E-05 3.7276E-05" />
+    <parent
+      link="front_right_femur_link" />
+    <child
+      link="front_right_tibia_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_right_foot_link">
+    <inertial>
+      <origin
+        xyz="-1.1475E-09 -1.7851E-10 -0.00013914"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010269" />
+      <inertia
+        ixx="1.6656E-08"
+        ixy="-9.3953E-15"
+        ixz="5.754E-15"
+        iyy="1.6656E-08"
+        iyz="8.9528E-16"
+        izz="1.7246E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_right_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/front_right_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.0619475711858466 0.0315268097379976 -0.149260389779713"
+      rpy="-0.00207607080041258 -0.00287997686253638 0.679644410877493" />
+    <parent
+      link="front_right_tibia_link" />
+    <child
+      link="front_right_foot_link" />
+    <axis
+      xyz="0 -0.999997292508137 -0.00232700053339396" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_right_coxa_link">
+    <inertial>
+      <origin
+        xyz="-0.0020038 -0.058361 -0.031064"
+        rpy="0 0 0" />
+      <mass
+        value="0.086385" />
+      <inertia
+        ixx="2.5844E-05"
+        ixy="-2.0234E-07"
+        ixz="3.8167E-08"
+        iyy="2.1374E-05"
+        iyz="1.5805E-07"
+        izz="1.639E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_right_coxa_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_right_coxa_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_right_coxa_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.086462 0.047119"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="middle_right_coxa_link" />
+    <axis
+      xyz="-8.0459E-05 -0.00018301 1" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_right_femur_link">
+    <inertial>
+      <origin
+        xyz="0.02244 0.032598 0.049748"
+        rpy="0 0 0" />
+      <mass
+        value="0.03096" />
+      <inertia
+        ixx="3.2838E-05"
+        ixy="1.8055E-07"
+        ixz="-1.1691E-05"
+        iyy="3.789E-05"
+        iyz="5.406E-07"
+        izz="8.1505E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_right_femur_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_right_femur_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_right_femur_joint"
+    type="revolute">
+    <origin
+      xyz="-0.034791 -0.068178 -0.021317"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="middle_right_coxa_link" />
+    <child
+      link="middle_right_femur_link" />
+    <axis
+      xyz="0.044752 0.999 -0.00010412" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_right_tibia_link">
+    <inertial>
+      <origin
+        xyz="0.021799 0.031174 -0.03082"
+        rpy="0 0 0" />
+      <mass
+        value="0.095402" />
+      <inertia
+        ixx="6.6301E-05"
+        ixy="9.9202E-07"
+        ixz="2.9813E-05"
+        iyy="8.8658E-05"
+        iyz="-1.3249E-06"
+        izz="3.2778E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_right_tibia_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_right_tibia_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_right_tibia_joint"
+    type="revolute">
+    <origin
+      xyz="0.040131 -0.0017945 0.1008"
+      rpy="0 0 0" />
+    <parent
+      link="middle_right_femur_link" />
+    <child
+      link="middle_right_tibia_link" />
+    <axis
+      xyz="-0.044725 -0.999 0.00019256" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_right_foot_link">
+    <inertial>
+      <origin
+        xyz="-9.2732E-10 6.8574E-10 -0.00013914"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010269" />
+      <inertia
+        ixx="1.6656E-08"
+        ixy="2.9397E-14"
+        ixz="4.6584E-15"
+        iyy="1.6656E-08"
+        iyz="-3.4426E-15"
+        izz="1.7246E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_right_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/middle_right_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_right_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.071308 0.028338 -0.14568"
+      rpy="-0.057868 0.0025818 1.5706" />
+    <parent
+      link="middle_right_tibia_link" />
+    <child
+      link="middle_right_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_right_coxa_link">
+    <inertial>
+      <origin
+        xyz="-0.047736 -0.033645 -0.031052"
+        rpy="0 0 0" />
+      <mass
+        value="0.086385" />
+      <inertia
+        ixx="2.2809E-05"
+        ixy="-2.0964E-06"
+        ixz="1.4798E-07"
+        iyy="2.4409E-05"
+        iyz="6.482E-08"
+        izz="1.639E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_right_coxa_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_right_coxa_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_coxa_joint"
+    type="revolute">
+    <origin
+      xyz="-0.061135 -0.06114 0.047119"
+      rpy="7.2511E-05 -0.0001863 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_coxa_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rear_right_femur_link">
+    <inertial>
+      <origin
+        xyz="-0.007125 0.033561 0.053513"
+        rpy="0 0 0" />
+      <mass
+        value="0.03096" />
+      <inertia
+        ixx="3.6722E-05"
+        ixy="-4.9016E-08"
+        ixz="5.0785E-06"
+        iyy="3.7896E-05"
+        iyz="-3.835E-09"
+        izz="4.2596E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_right_femur_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_right_femur_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_femur_joint"
+    type="revolute">
+    <origin
+      xyz="-0.075358 -0.013438 -0.021302"
+      rpy="-0.00015016 -0.00012276 -2.5381" />
+    <parent
+      link="rear_right_coxa_link" />
+    <child
+      link="rear_right_femur_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rear_right_tibia_link">
+    <inertial>
+      <origin
+        xyz="0.028561 0.032124 -0.023436"
+        rpy="0 0 0" />
+      <mass
+        value="0.095402" />
+      <inertia
+        ixx="4.6536E-05"
+        ixy="-2.1918E-08"
+        ixz="3.4086E-05"
+        iyy="8.8702E-05"
+        iyz="1.4798E-08"
+        izz="5.25E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_right_tibia_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_right_tibia_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_tibia_joint"
+    type="revolute">
+    <origin
+      xyz="-0.016411 -1.2488E-05 0.10726"
+      rpy="-6.4057E-05 4.4155E-05 -2.7619E-05" />
+    <parent
+      link="rear_right_femur_link" />
+    <child
+      link="rear_right_tibia_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.57"
+      upper="2.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rear_right_foot_link">
+    <inertial>
+      <origin
+        xyz="-2.06251765666465E-10 1.12763162696261E-09 -0.000139135605363147"
+        rpy="0 0 0" />
+      <mass
+        value="0.00102687106652255" />
+      <inertia
+        ixx="1.66564902316782E-08"
+        ixy="1.08138551679642E-14"
+        ixz="1.03801976268074E-15"
+        iyy="1.66564330878938E-08"
+        iyz="-5.67508250376935E-15"
+        izz="1.7246104627114E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_right_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/rear_right_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.1098 0.031527 -0.11857"
+      rpy="-0.2178 0.28534 2.4759" />
+    <parent
+      link="rear_right_tibia_link" />
+    <child
+      link="rear_right_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
