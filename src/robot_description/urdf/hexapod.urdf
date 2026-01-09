@@ -3,22 +3,22 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="hexapod">
+  name="Hexapod">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="-5.66285111708425E-06 2.39925924211176E-06 0.0161961871370444"
+        xyz="-6.18193581229152E-06 2.39717543056817E-06 0.0161961871063663"
         rpy="0 0 0" />
       <mass
-        value="0.786295693203365" />
+        value="0.786295694888978" />
       <inertia
-        ixx="0.000787785735234733"
-        ixy="8.85714758462769E-09"
-        ixz="2.40410128168524E-08"
-        iyy="0.000864976152289171"
-        iyz="1.37831333939479E-08"
-        izz="0.00156986494698497" />
+        ixx="0.00078778573537143"
+        ixy="8.85654590300931E-09"
+        ixz="2.40443432739839E-08"
+        iyy="0.00086497615387617"
+        iyz="1.37840846691492E-08"
+        izz="0.00156986494830974" />
     </inertial>
     <visual>
       <origin
@@ -48,17 +48,17 @@
     name="front_left_coxa_link">
     <inertial>
       <origin
-        xyz="0.040344 0.042218 -0.031064"
+        xyz="0.042272 0.041896 0.00059547"
         rpy="0 0 0" />
       <mass
-        value="0.086385" />
+        value="0.086281" />
       <inertia
-        ixx="2.3662E-05"
-        ixy="-2.2432E-06"
-        ixz="-1.3369E-07"
-        iyy="2.3556E-05"
-        iyz="-9.2535E-08"
-        izz="1.639E-05" />
+        ixx="2.3604E-05"
+        ixy="-2.2438E-06"
+        ixz="-1.3482E-07"
+        iyy="2.3608E-05"
+        iyz="-9.0884E-08"
+        izz="1.6384E-05" />
     </inertial>
     <visual>
       <origin
@@ -88,17 +88,17 @@
     name="front_left_coxa_joint"
     type="revolute">
     <origin
-      xyz="0.06114 0.061135 0.047119"
+      xyz="0.0597794623037307 0.0610074569827942 0.0154258000000004"
       rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="front_left_coxa_link" />
     <axis
-      xyz="-0.0001863 -7.2511E-05 -1" />
+      xyz="0.0425207281634428 0.00387756005096805 -0.999088060285229" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -106,17 +106,17 @@
     name="front_left_femur_link">
     <inertial>
       <origin
-        xyz="0.04135 0.032959 0.032957"
+        xyz="0.052841 0.0010893 -0.0016863"
         rpy="0 0 0" />
       <mass
-        value="0.031609" />
+        value="0.0314" />
       <inertia
-        ixx="1.7355E-05"
-        ixy="-3.1461E-08"
-        ixz="-1.6713E-05"
-        iyy="3.7927E-05"
-        iyz="3.7647E-08"
-        izz="2.3659E-05" />
+        ixx="3.499E-06"
+        ixy="-2.5485E-09"
+        ixz="4.2611E-07"
+        iyy="3.7915E-05"
+        iyz="4.9086E-08"
+        izz="3.7503E-05" />
     </inertial>
     <visual>
       <origin
@@ -146,8 +146,8 @@
     name="front_left_femur_joint"
     type="revolute">
     <origin
-      xyz="0.071347 0.027719 -0.021317"
-      rpy="-0.00010412 0.00010671 0.79764" />
+      xyz="0.0506354195835637 0.0493770568562628 0.0103729999999975"
+      rpy="-0.000104123938980253 0.000104107183134694 0.785317693150283" />
     <parent
       link="front_left_coxa_link" />
     <child
@@ -155,8 +155,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -164,17 +164,17 @@
     name="front_left_tibia_link">
     <inertial>
       <origin
-        xyz="0.015683 0.032124 -0.033451"
+        xyz="-0.036753 0.00043104 0.0037586"
         rpy="0 0 0" />
       <mass
         value="0.095402" />
       <inertia
-        ixx="7.414E-05"
-        ixy="-1.3407E-08"
-        ixz="2.376E-05"
+        ixx="1.6965E-05"
+        ixy="2.6445E-08"
+        ixz="1.0538E-05"
         iyy="8.8702E-05"
-        iyz="2.2794E-08"
-        izz="2.4896E-05" />
+        iyz="-2.2918E-10"
+        izz="8.2071E-05" />
     </inertial>
     <visual>
       <origin
@@ -204,8 +204,8 @@
     name="front_left_tibia_joint"
     type="revolute">
     <origin
-      xyz="0.083521 0 0.06927"
-      rpy="-9.4214E-05 9.656E-05 5.5354E-05" />
+      xyz="0.108492266657861 0 -0.00133055426669743"
+      rpy="0.000184555914276492 -0.000184623471871961 0.00026345026142038" />
     <parent
       link="front_left_femur_link" />
     <child
@@ -213,8 +213,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="0"
+      upper="3.1415"
       effort="0"
       velocity="0" />
   </joint>
@@ -222,17 +222,17 @@
     name="front_left_foot_link">
     <inertial>
       <origin
-        xyz="1.8442E-10 -1.1403E-09 -0.00013914"
+        xyz="1.14070369122699E-09 -1.1370719643633E-10 -0.000139135605409638"
         rpy="0 0 0" />
       <mass
-        value="0.0010269" />
+        value="0.00102687106652255" />
       <inertia
-        ixx="1.6656E-08"
-        ixy="9.5965E-15"
-        ixz="-9.2478E-16"
-        iyy="1.6656E-08"
-        iyz="5.7294E-15"
-        izz="1.7246E-08" />
+        ixx="1.66564317116379E-08"
+        ixy="6.03331683107328E-15"
+        ixz="-5.74075577541418E-15"
+        iyy="1.66564916079342E-08"
+        iyz="5.72511609703753E-16"
+        izz="1.7246104627114E-08" />
     </inertial>
     <visual>
       <origin
@@ -262,8 +262,8 @@
     name="front_left_foot_joint"
     type="fixed">
     <origin
-      xyz="0.048031 0.031527 -0.1543"
-      rpy="-0.063104 0.061486 -0.80158" />
+      xyz="-0.157028654923345 -0.000166190898608631 0.0381859537813213"
+      rpy="-2.271181641943 -0.422454157208771 -1.23828061902425" />
     <parent
       link="front_left_tibia_link" />
     <child
@@ -275,17 +275,17 @@
     name="middle_left_coxa_link">
     <inertial>
       <origin
-        xyz="0.0024295 0.058351 -0.031053"
+        xyz="-0.00060292 0.05847 0.00059547"
         rpy="0 0 0" />
       <mass
-        value="0.086385" />
+        value="0.086281" />
       <inertia
-        ixx="2.584E-05"
-        ixy="-2.3471E-07"
-        ixz="-3.8593E-08"
-        iyy="2.1377E-05"
-        iyz="-1.5687E-07"
-        izz="1.639E-05" />
+        ixx="2.585E-05"
+        ixy="-2.0825E-09"
+        ixz="-3.1068E-08"
+        iyy="2.1362E-05"
+        iyz="-1.596E-07"
+        izz="1.6384E-05" />
     </inertial>
     <visual>
       <origin
@@ -315,17 +315,17 @@
     name="middle_left_coxa_joint"
     type="revolute">
     <origin
-      xyz="0 0.086462 0.047119"
-      rpy="-0.00018301 8.0459E-05 0" />
+      xyz="0 0.0864545384187688 0.0154258000000007"
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="middle_left_coxa_link" />
     <axis
-      xyz="0 0 -1" />
+      xyz="-8.04594058439077E-05 -0.000183005707343813 -0.999999980017597" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -333,17 +333,17 @@
     name="middle_left_femur_link">
     <inertial>
       <origin
-        xyz="0.033591 0.032958 0.040835"
+        xyz="-0.0051763 0.00052888 -0.052845"
         rpy="0 0 0" />
       <mass
-        value="0.031609" />
+        value="0.0314" />
       <inertia
-        ixx="2.4427E-05"
-        ixy="-3.8022E-08"
-        ixz="-1.655E-05"
-        iyy="3.7927E-05"
-        iyz="3.1013E-08"
-        izz="1.6587E-05" />
+        ixx="3.7498E-05"
+        ixy="3.6609E-09"
+        ixz="-3.9522E-07"
+        iyy="3.7921E-05"
+        iyz="-4.3167E-08"
+        izz="3.4983E-06" />
     </inertial>
     <visual>
       <origin
@@ -373,8 +373,8 @@
     name="middle_left_femur_joint"
     type="revolute">
     <origin
-      xyz="0.035286 0.067928 -0.021301"
-      rpy="-0.00017502 0.001814 1.5188" />
+      xyz="2.10046607146265E-05 0.0696742115812287 0.0138198356843305"
+      rpy="1.56394087721752 -1.46256545726282 0.00681533790492595" />
     <parent
       link="middle_left_coxa_link" />
     <child
@@ -382,8 +382,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -391,17 +391,17 @@
     name="middle_left_tibia_link">
     <inertial>
       <origin
-        xyz="0.001575 0.032124 -0.036912"
+        xyz="0.035157 0.00043104 0.011354"
         rpy="0 0 0" />
       <mass
         value="0.095402" />
       <inertia
-        ixx="8.3724E-05"
-        ixy="-3.5837E-09"
-        ixz="-8.1935E-07"
+        ixx="1.9749E-05"
+        ixy="-2.4298E-08"
+        ixz="-1.6869E-05"
         iyy="8.8702E-05"
-        iyz="2.62E-08"
-        izz="1.5311E-05" />
+        iyz="-1.0435E-08"
+        izz="7.9287E-05" />
     </inertial>
     <visual>
       <origin
@@ -431,8 +431,8 @@
     name="middle_left_tibia_joint"
     type="revolute">
     <origin
-      xyz="0.06729 0 0.085125"
-      rpy="-8.855E-05 0.0017051 0.00013407" />
+      xyz="-0.00465888477440595 -0.000506201381017687 -0.108495899458512"
+      rpy="0.000455617198050646 -1.15731885852398 0.107730800271824" />
     <parent
       link="middle_left_femur_link" />
     <child
@@ -440,8 +440,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="0"
+      upper="3.1415"
       effort="0"
       velocity="0" />
   </joint>
@@ -449,17 +449,17 @@
     name="middle_left_foot_link">
     <inertial>
       <origin
-        xyz="5.0957E-09 -2.4354E-09 -0.00013914"
+        xyz="8.33134791868419E-10 -7.87396869927903E-10 -0.000139135605393956"
         rpy="0 0 0" />
       <mass
-        value="0.0010269" />
+        value="0.00102687106652256" />
       <inertia
-        ixx="1.6656E-08"
-        ixy="3.0429E-14"
-        ixz="-4.262E-15"
-        iyy="1.6656E-08"
-        iyz="3.8937E-15"
-        izz="1.7246E-08" />
+        ixx="1.66564599387321E-08"
+        ixy="3.05013189903406E-14"
+        ixz="-4.19279946946903E-15"
+        iyy="1.66564633808401E-08"
+        iyz="3.9628877150851E-15"
+        izz="1.7246104627114E-08" />
     </inertial>
     <visual>
       <origin
@@ -489,8 +489,8 @@
     name="middle_left_foot_joint"
     type="fixed">
     <origin
-      xyz="-0.015167 0.031527 -0.16089"
-      rpy="-0.48384 0.00019266 -1.5708" />
+      xyz="0.15911554000758 -0.000166190898614748 0.0282561579362873"
+      rpy="1.35669573662495 0 -1.57059641480066" />
     <parent
       link="middle_left_tibia_link" />
     <child
@@ -502,17 +502,17 @@
     name="rear_left_coxa_link">
     <inertial>
       <origin
-        xyz="-0.029422 0.050449 -0.031052"
+        xyz="-0.04032 0.043236 0.00059549"
         rpy="0 0 0" />
       <mass
-        value="0.086385" />
+        value="0.086281" />
       <inertia
-        ixx="2.4756E-05"
-        ixy="1.9286E-06"
-        ixz="5.1727E-08"
-        iyy="2.2462E-05"
-        iyz="-1.5307E-07"
-        izz="1.639E-05" />
+        ixx="2.3608E-05"
+        ixy="2.2438E-06"
+        ixz="9.0883E-08"
+        iyy="2.3604E-05"
+        iyz="-1.3482E-07"
+        izz="1.6384E-05" />
     </inertial>
     <visual>
       <origin
@@ -540,19 +540,19 @@
   </link>
   <joint
     name="rear_left_coxa_joint"
-    type="revolute">
+    type="fixed">
     <origin
-      xyz="-0.061135 0.06114 0.047119"
-      rpy="-0.0001863 -7.2511E-05 0" />
+      xyz="-0.0625828215626599 0.0588152120207696 0.0154258000000006"
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="rear_left_coxa_link" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -560,17 +560,17 @@
     name="rear_left_femur_link">
     <inertial>
       <origin
-        xyz="0.02126 0.033564 0.049623"
+        xyz="0.053956 0.0016978 -0.0017331"
         rpy="0 0 0" />
       <mass
-        value="0.03096" />
+        value="0.030751" />
       <inertia
-        ixx="3.2689E-05"
-        ixy="-4.4726E-08"
-        ixz="-1.1852E-05"
-        iyy="3.7896E-05"
-        iyz="2.0236E-08"
-        izz="8.2934E-06" />
+        ixx="3.4832E-06"
+        ixy="-2.5371E-09"
+        ixz="4.332E-07"
+        iyy="3.7885E-05"
+        iyz="4.9085E-08"
+        izz="3.7487E-05" />
     </inertial>
     <visual>
       <origin
@@ -600,8 +600,8 @@
     name="rear_left_femur_joint"
     type="revolute">
     <origin
-      xyz="-0.0069169 0.076233 -0.021302"
-      rpy="-0.00013328 -0.00038067 2.0884" />
+      xyz="-0.0478016922764079 0.0515996698665222 0.0103730000000015"
+      rpy="-0.00010412393892102 -0.000104140694076206 2.35611404162862" />
     <parent
       link="rear_left_coxa_link" />
     <child
@@ -609,8 +609,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -618,17 +618,17 @@
     name="rear_left_tibia_link">
     <inertial>
       <origin
-        xyz="0.017478 0.032124 -0.032549"
+        xyz="-0.036754 0.00043104 0.0037527"
         rpy="0 0 0" />
       <mass
         value="0.095402" />
       <inertia
-        ixx="7.1416E-05"
-        ixy="-1.4627E-08"
-        ixz="2.6292E-05"
+        ixx="1.6961E-05"
+        ixy="2.6446E-08"
+        ixz="1.0527E-05"
         iyy="8.8702E-05"
-        iyz="2.2034E-08"
-        izz="2.762E-05" />
+        iyz="-2.242E-10"
+        izz="8.2075E-05" />
     </inertial>
     <visual>
       <origin
@@ -658,8 +658,8 @@
     name="rear_left_tibia_joint"
     type="revolute">
     <origin
-      xyz="0.040782 0 0.10055"
-      rpy="-9.2524E-05 -0.0001625 4.4556E-05" />
+      xyz="0.108491987220254 0 -0.0013531475220351"
+      rpy="0.000184610780237547 0.000184543218609282 0.000263479964488295" />
     <parent
       link="rear_left_femur_link" />
     <child
@@ -667,8 +667,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="0"
+      upper="3.1415"
       effort="0"
       velocity="0" />
   </joint>
@@ -676,17 +676,17 @@
     name="rear_left_foot_link">
     <inertial>
       <origin
-        xyz="1.0887E-09 -3.974E-10 -0.00013914"
+        xyz="9.79572360726433E-10 -5.95212740206463E-10 -0.000139135605487437"
         rpy="0 0 0" />
       <mass
-        value="0.0010269" />
+        value="0.00102687106652255" />
       <inertia
-        ixx="1.6656E-08"
-        ixy="1.9903E-14"
-        ixz="-5.4631E-15"
-        iyy="1.6656E-08"
-        iyz="1.9957E-15"
-        izz="1.7246E-08" />
+        ixx="1.66564475959389E-08"
+        ixy="2.71201159844128E-14"
+        ixz="-4.92983811976141E-15"
+        iyy="1.66564757236332E-08"
+        iyz="2.99678870383865E-15"
+        izz="1.7246104627114E-08" />
     </inertial>
     <visual>
       <origin
@@ -716,8 +716,8 @@
     name="rear_left_foot_joint"
     type="fixed">
     <origin
-      xyz="0.056346 0.031527 -0.15146"
-      rpy="-0.033706 0.00019667 -1.5708" />
+      xyz="-0.157034797728908 -0.000166190898612381 0.0381606844208325"
+      rpy="-2.1990344128274 -8.04446851697625E-05 -1.57097933897523" />
     <parent
       link="rear_left_tibia_link" />
     <child
@@ -729,17 +729,17 @@
     name="front_right_coxa_link">
     <inertial>
       <origin
-        xyz="0.0458 -0.036227 -0.031064"
+        xyz="0.04316 -0.041173 0.00059549"
         rpy="0 0 0" />
       <mass
-        value="0.086385" />
+        value="0.086281" />
       <inertia
-        ixx="2.314E-05"
-        ixy="2.1942E-06"
-        ixz="-1.0461E-07"
-        iyy="2.4078E-05"
-        iyz="1.2447E-07"
-        izz="1.639E-05" />
+        ixx="2.3608E-05"
+        ixy="2.2438E-06"
+        ixz="-9.0883E-08"
+        iyy="2.3604E-05"
+        iyz="1.3482E-07"
+        izz="1.6384E-05" />
     </inertial>
     <visual>
       <origin
@@ -769,17 +769,17 @@
     name="front_right_coxa_joint"
     type="revolute">
     <origin
-      xyz="0.06114 -0.061135 0.047119"
+      xyz="0.0597479377257695 -0.0608728713812492 0.0154258000000012"
       rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="front_right_coxa_link" />
     <axis
-      xyz="7.2511E-05 -0.0001863 1" />
+      xyz="-0.0437385357924751 0.00789225955945658 0.999011838130949" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -787,17 +787,17 @@
     name="front_right_femur_link">
     <inertial>
       <origin
-        xyz="0.0089189 0.033563 0.053244"
+        xyz="0.053956 0.0016978 -0.0017331"
         rpy="0 0 0" />
       <mass
-        value="0.03096" />
+        value="0.030751" />
       <inertia
-        ixx="3.6771E-05"
-        ixy="-4.811E-08"
-        ixz="-4.9193E-06"
-        iyy="3.7896E-05"
-        iyz="9.9323E-09"
-        izz="4.2106E-06" />
+        ixx="3.4832E-06"
+        ixy="-2.5371E-09"
+        ixz="4.332E-07"
+        iyy="3.7885E-05"
+        iyz="4.9085E-08"
+        izz="3.7487E-05" />
     </inertial>
     <visual>
       <origin
@@ -827,8 +827,8 @@
     name="front_right_femur_joint"
     type="revolute">
     <origin
-      xyz="0.034257 -0.068448 -0.021317"
-      rpy="-0.00010412 -8.4145E-05 -0.67968" />
+      xyz="0.0506416297387538 -0.0495369568805863 0.0103729999999976"
+      rpy="-0.000104123938883876 -0.000104140694039058 -0.785478611961186" />
     <parent
       link="front_right_coxa_link" />
     <child
@@ -836,8 +836,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -845,17 +845,17 @@
     name="front_right_tibia_link">
     <inertial>
       <origin
-        xyz="0.018678 0.032124 -0.031876"
+        xyz="-0.036754 0.00043104 0.0037527"
         rpy="0 0 0" />
       <mass
         value="0.095402" />
       <inertia
-        ixx="6.9398E-05"
-        ixy="-1.5437E-08"
-        ixz="2.7849E-05"
+        ixx="1.6961E-05"
+        ixy="2.6443E-08"
+        ixz="1.0527E-05"
         iyy="8.8702E-05"
-        iyz="2.1472E-08"
-        izz="2.9638E-05" />
+        iyz="-2.2432E-10"
+        izz="8.2075E-05" />
     </inertial>
     <visual>
       <origin
@@ -885,8 +885,8 @@
     name="front_right_tibia_joint"
     type="revolute">
     <origin
-      xyz="0.015841 0 0.10735"
-      rpy="-9.1062E-05 -7.3584E-05 3.7276E-05" />
+      xyz="0.10849 0 -0.0013531"
+      rpy="0.00018461 0.00018454 0.00026348" />
     <parent
       link="front_right_femur_link" />
     <child
@@ -894,8 +894,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="0"
+      upper="3.1415"
       effort="0"
       velocity="0" />
   </joint>
@@ -903,17 +903,17 @@
     name="front_right_foot_link">
     <inertial>
       <origin
-        xyz="-1.1475E-09 -1.7851E-10 -0.00013914"
+        xyz="-4.92431262433257E-10 1.03551793528833E-09 -0.000139135605653394"
         rpy="0 0 0" />
       <mass
-        value="0.0010269" />
+        value="0.00102687106652255" />
       <inertia
-        ixx="1.6656E-08"
-        ixy="-9.3953E-15"
-        ixz="5.754E-15"
-        iyy="1.6656E-08"
-        iyz="8.9528E-16"
-        izz="1.7246E-08" />
+        ixx="1.6656480938687E-08"
+        ixy="2.36984486257665E-14"
+        ixz="2.47787044655469E-15"
+        iyy="1.66564423808852E-08"
+        iyz="-5.21001001947976E-15"
+        izz="1.7246104627114E-08" />
     </inertial>
     <visual>
       <origin
@@ -943,14 +943,14 @@
     name="front_right_foot_joint"
     type="fixed">
     <origin
-      xyz="0.0619475711858466 0.0315268097379976 -0.149260389779713"
-      rpy="-0.00207607080041258 -0.00287997686253638 0.679644410877493" />
+      xyz="-0.157034797728908 -0.000166190898609997 0.0381606844208381"
+      rpy="2.27095727607043 -0.422354608328963 1.23800658745024" />
     <parent
       link="front_right_tibia_link" />
     <child
       link="front_right_foot_link" />
     <axis
-      xyz="0 -0.999997292508137 -0.00232700053339396" />
+      xyz="0 0 0" />
     <limit
       lower="0"
       upper="0"
@@ -961,17 +961,17 @@
     name="middle_right_coxa_link">
     <inertial>
       <origin
-        xyz="-0.0020038 -0.058361 -0.031064"
+        xyz="0.00060348 -0.058469 0.00059547"
         rpy="0 0 0" />
       <mass
-        value="0.086385" />
+        value="0.086281" />
       <inertia
-        ixx="2.5844E-05"
-        ixy="-2.0234E-07"
-        ixz="3.8167E-08"
-        iyy="2.1374E-05"
-        iyz="1.5805E-07"
-        izz="1.639E-05" />
+        ixx="2.585E-05"
+        ixy="-2.0811E-09"
+        ixz="3.1068E-08"
+        iyy="2.1362E-05"
+        iyz="1.596E-07"
+        izz="1.6384E-05" />
     </inertial>
     <visual>
       <origin
@@ -1001,17 +1001,17 @@
     name="middle_right_coxa_joint"
     type="revolute">
     <origin
-      xyz="0 -0.086462 0.047119"
+      xyz="0 -0.0864558000013206 0.0154258000001641"
       rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="middle_right_coxa_link" />
     <axis
-      xyz="-8.0459E-05 -0.00018301 1" />
+      xyz="-8.04591239439089E-05 -0.000183005730591605 0.999999980017616" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -1019,17 +1019,17 @@
     name="middle_right_femur_link">
     <inertial>
       <origin
-        xyz="0.02244 0.032598 0.049748"
+        xyz="0.034359 0.0016978 0.041639"
         rpy="0 0 0" />
       <mass
-        value="0.03096" />
+        value="0.030751" />
       <inertia
-        ixx="3.2838E-05"
-        ixy="1.8055E-07"
-        ixz="-1.1691E-05"
-        iyy="3.789E-05"
-        iyz="5.406E-07"
-        izz="8.1505E-06" />
+        ixx="2.4358E-05"
+        ixy="-4.0394E-08"
+        ixz="-1.656E-05"
+        iyy="3.7885E-05"
+        iyz="2.8001E-08"
+        izz="1.6612E-05" />
     </inertial>
     <visual>
       <origin
@@ -1059,17 +1059,17 @@
     name="middle_right_femur_joint"
     type="revolute">
     <origin
-      xyz="-0.034791 -0.068178 -0.021317"
-      rpy="0 0 -1.5708" />
+      xyz="-2.04500179069247E-05 -0.0696729499986796 0.0103729999998343"
+      rpy="-0.00017029088670727 0.912907710407541 -1.57101153482602" />
     <parent
       link="middle_right_coxa_link" />
     <child
       link="middle_right_femur_link" />
     <axis
-      xyz="0.044752 0.999 -0.00010412" />
+      xyz="0 1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -1077,17 +1077,17 @@
     name="middle_right_tibia_link">
     <inertial>
       <origin
-        xyz="0.021799 0.031174 -0.03082"
+        xyz="0.035157 0.00043104 0.011354"
         rpy="0 0 0" />
       <mass
         value="0.095402" />
       <inertia
-        ixx="6.6301E-05"
-        ixy="9.9202E-07"
-        ixz="2.9813E-05"
-        iyy="8.8658E-05"
-        iyz="-1.3249E-06"
-        izz="3.2778E-05" />
+        ixx="1.9749E-05"
+        ixy="-2.43E-08"
+        ixz="-1.6869E-05"
+        iyy="8.8702E-05"
+        iyz="-1.0435E-08"
+        izz="7.9287E-05" />
     </inertial>
     <visual>
       <origin
@@ -1117,17 +1117,17 @@
     name="middle_right_tibia_joint"
     type="revolute">
     <origin
-      xyz="0.040131 -0.0017945 0.1008"
-      rpy="0 0 0" />
+      xyz="0.067399025687048 0 0.0850277227476781"
+      rpy="-3.14148378102785 0.498689769885715 -3.14123342941393" />
     <parent
       link="middle_right_femur_link" />
     <child
       link="middle_right_tibia_link" />
     <axis
-      xyz="-0.044725 -0.999 0.00019256" />
+      xyz="0 -1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="0"
+      upper="3.1415"
       effort="0"
       velocity="0" />
   </joint>
@@ -1135,17 +1135,17 @@
     name="middle_right_foot_link">
     <inertial>
       <origin
-        xyz="-9.2732E-10 6.8574E-10 -0.00013914"
+        xyz="-9.24882211046424E-10 6.77469705334666E-10 -0.000139135605643083"
         rpy="0 0 0" />
       <mass
-        value="0.0010269" />
+        value="0.00102687106652256" />
       <inertia
-        ixx="1.6656E-08"
-        ixy="2.9397E-14"
-        ixz="4.6584E-15"
-        iyy="1.6656E-08"
-        iyz="-3.4426E-15"
-        izz="1.7246E-08" />
+        ixx="1.6656452436194E-08"
+        ixy="2.91241795993467E-14"
+        ixz="4.65473682962743E-15"
+        iyy="1.66564708833781E-08"
+        iyz="-3.4084412137988E-15"
+        izz="1.7246104627114E-08" />
     </inertial>
     <visual>
       <origin
@@ -1175,8 +1175,8 @@
     name="middle_right_foot_joint"
     type="fixed">
     <origin
-      xyz="0.071308 0.028338 -0.14568"
-      rpy="-0.057868 0.0025818 1.5706" />
+      xyz="0.159115539999232 -0.0001661908986167 0.0282561579833033"
+      rpy="-1.35669573692048 0 1.57099623878914" />
     <parent
       link="middle_right_tibia_link" />
     <child
@@ -1188,17 +1188,17 @@
     name="rear_right_coxa_link">
     <inertial>
       <origin
-        xyz="-0.047736 -0.033645 -0.031052"
+        xyz="-0.041056 -0.04304 0.00059547"
         rpy="0 0 0" />
       <mass
-        value="0.086385" />
+        value="0.086281" />
       <inertia
-        ixx="2.2809E-05"
-        ixy="-2.0964E-06"
-        ixz="1.4798E-07"
-        iyy="2.4409E-05"
-        iyz="6.482E-08"
-        izz="1.639E-05" />
+        ixx="2.3604E-05"
+        ixy="-2.2438E-06"
+        ixz="1.3482E-07"
+        iyy="2.3608E-05"
+        iyz="9.0884E-08"
+        izz="1.6384E-05" />
     </inertial>
     <visual>
       <origin
@@ -1228,17 +1228,17 @@
     name="rear_right_coxa_joint"
     type="revolute">
     <origin
-      xyz="-0.061135 -0.06114 0.047119"
-      rpy="7.2511E-05 -0.0001863 0" />
+      xyz="-0.0609902962483643 -0.0598679792477214 0.0154257999999996"
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="rear_right_coxa_link" />
     <axis
-      xyz="0 0 1" />
+      xyz="-0.00419160564654864 -0.0399618653751459 -0.999192413781171" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -1246,17 +1246,17 @@
     name="rear_right_femur_link">
     <inertial>
       <origin
-        xyz="-0.007125 0.033561 0.053513"
+        xyz="0.053957 0.0016978 -0.0017219"
         rpy="0 0 0" />
       <mass
-        value="0.03096" />
+        value="0.030751" />
       <inertia
-        ixx="3.6722E-05"
-        ixy="-4.9016E-08"
-        ixz="5.0785E-06"
-        iyy="3.7896E-05"
-        iyz="-3.835E-09"
-        izz="4.2596E-06" />
+        ixx="3.483E-06"
+        ixy="-2.5473E-09"
+        ixz="4.2611E-07"
+        iyy="3.7885E-05"
+        iyz="4.9084E-08"
+        izz="3.7487E-05" />
     </inertial>
     <visual>
       <origin
@@ -1286,8 +1286,8 @@
     name="rear_right_femur_joint"
     type="revolute">
     <origin
-      xyz="-0.075358 -0.013438 -0.021302"
-      rpy="-0.00015016 -0.00012276 -2.5381" />
+      xyz="-0.049419532013472 -0.0505215882168034 0.0103730000000031"
+      rpy="-0.000104123938777913 0.000104107182932361 -2.35627496043963" />
     <parent
       link="rear_right_coxa_link" />
     <child
@@ -1295,8 +1295,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="-1.57"
+      upper="1.57"
       effort="0"
       velocity="0" />
   </joint>
@@ -1304,17 +1304,17 @@
     name="rear_right_tibia_link">
     <inertial>
       <origin
-        xyz="0.028561 0.032124 -0.023436"
+        xyz="-0.036753 0.00043104 0.0037586"
         rpy="0 0 0" />
       <mass
         value="0.095402" />
       <inertia
-        ixx="4.6536E-05"
-        ixy="-2.1918E-08"
-        ixz="3.4086E-05"
+        ixx="1.6965E-05"
+        ixy="2.6445E-08"
+        ixz="1.0538E-05"
         iyy="8.8702E-05"
-        iyz="1.4798E-08"
-        izz="5.25E-05" />
+        iyz="-2.2924E-10"
+        izz="8.2071E-05" />
     </inertial>
     <visual>
       <origin
@@ -1344,17 +1344,17 @@
     name="rear_right_tibia_joint"
     type="revolute">
     <origin
-      xyz="-0.016411 -1.2488E-05 0.10726"
-      rpy="-6.4057E-05 4.4155E-05 -2.7619E-05" />
+      xyz="0.10849 0 -0.0013306"
+      rpy="0.00018456 -0.00018462 0.00026345" />
     <parent
       link="rear_right_femur_link" />
     <child
       link="rear_right_tibia_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
-      lower="-2.57"
-      upper="2.57"
+      lower="0"
+      upper="3.1415"
       effort="0"
       velocity="0" />
   </joint>
@@ -1362,17 +1362,17 @@
     name="rear_right_foot_link">
     <inertial>
       <origin
-        xyz="-2.06251765666465E-10 1.12763162696261E-09 -0.000139135605363147"
+        xyz="-1.1436E-09 7.9452E-11 -0.00013914"
         rpy="0 0 0" />
       <mass
-        value="0.00102687106652255" />
+        value="0.0010269" />
       <inertia
-        ixx="1.66564902316782E-08"
-        ixy="1.08138551679642E-14"
-        ixz="1.03801976268074E-15"
-        iyy="1.66564330878938E-08"
-        iyz="-5.67508250376935E-15"
-        izz="1.7246104627114E-08" />
+        ixx="1.6656E-08"
+        ixy="4.2207E-15"
+        ixz="5.7554E-15"
+        iyy="1.6656E-08"
+        iyz="-3.9949E-16"
+        izz="1.7246E-08" />
     </inertial>
     <visual>
       <origin
@@ -1402,8 +1402,8 @@
     name="rear_right_foot_joint"
     type="fixed">
     <origin
-      xyz="0.1098 0.031527 -0.11857"
-      rpy="-0.2178 0.28534 2.4759" />
+      xyz="-0.157028654923349 -0.000166190898619894 0.0381859537813168"
+      rpy="2.27118164194299 0.422454157208764 1.9033120345656" />
     <parent
       link="rear_right_tibia_link" />
     <child
