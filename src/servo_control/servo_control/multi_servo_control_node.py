@@ -11,7 +11,7 @@ class MultiServoControlNode(Node):
         super().__init__('multi_servo_control_node')
         self.subscription = self.create_subscription(
             Float32MultiArray,
-            '/leg/joint_angles',
+            '/joint_angles',
             self.angle_callback,
             10
         )

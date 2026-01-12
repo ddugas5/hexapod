@@ -17,9 +17,8 @@ def solve_angles(z, y):
 
 #calulate in joint space       
 x = 0.0
-y = 0.0
-z = 0.0
-
+y = 8.0
+z = -6.0
 
 ta, theta_f = solve_angles(z, y)
 
