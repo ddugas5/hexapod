@@ -21,6 +21,14 @@ def generate_launch_description():
         parameters=[{'robot_description':robot_description}]
     )
 
+    inverse_kinematics_node = Node(
+        package="robot_kinematics",
+        namespace="robot_kinematics",
+        executable="inverse_kinematics_node",
+        name="inverse_kinematics_node",
+    )
+
     return LaunchDescription([
         robot_state_publisher_node,
+        inverse_kinematics_node,
     ])

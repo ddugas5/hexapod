@@ -540,7 +540,7 @@
   </link>
   <joint
     name="rear_left_coxa_joint"
-    type="fixed">
+    type="revolute">
     <origin
       xyz="-0.0625828215626599 0.0588152120207696 0.0154258000000006"
       rpy="0 0 0" />
@@ -549,7 +549,7 @@
     <child
       link="rear_left_coxa_link" />
     <axis
-      xyz="0 0 0" />
+      xyz="0 0 1" />
     <limit
       lower="-1.57"
       upper="1.57"
