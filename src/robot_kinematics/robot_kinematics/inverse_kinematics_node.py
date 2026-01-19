@@ -161,6 +161,11 @@ class InverseKinematicsNode(Node):
 
         self.joint_state_publisher.publish(joint_msg)
 
+        #publish to servo node
+        angle_msg = Float32MultiArray()
+        angle_msg.data = list(self.joint_angles.values())
+        self.ik_publisher.publish(angle_msg)
+
         # #change to degrees
         # femur_angle_deg = np.rad2deg(femur_angle)  #final femur angle in deg
         # tibia_angle_deg = np.rad2deg(tibia_angle) #final tibia angle in deg
