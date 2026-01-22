@@ -13,7 +13,7 @@ class TrajectoryControlNode(Node):
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
-        self.matrix = [[0.0, 0.0, 0.0], [0.0, 5.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+        self.matrix = [[0.0, 5.0, 0.0], [0.0, 5.0, -2.0], [0.0, 3.0, -2.0], [0.0, 5.0, 0.0], [0.0, 5.0, 0.0], [0.0, 5.0, 0.0]]
 
     def timer_callback(self):
         msg = Float32MultiArray()
