@@ -23,6 +23,9 @@ class InverseKinematicsNode(Node):
         #publish to servo controller (use in the future)
         self.ik_publisher = self.create_publisher(Float32MultiArray, '/joint_angles', 10)
 
+        #publish degrees for debugging
+        self.deg_publisher = self.create_publisher(Float32MultiArray, '/joint_angles/degrees', 10)
+
         #define leg configuration
         self.legs = {
             "front_left": {
@@ -66,6 +69,27 @@ class InverseKinematicsNode(Node):
 
         #make dict of all joint angles
         self.joint_angles = {
+            'front_left_coxa_joint': 0.0,
+            'front_left_femur_joint': 0.0,
+            'front_left_tibia_joint': 0.0,
+            'middle_left_coxa_joint': 0.0,
+            'middle_left_femur_joint': 0.0,
+            'middle_left_tibia_joint': 0.0,
+            'rear_left_femur_joint': 0.0,
+            'rear_left_tibia_joint': 0.0,
+            'front_right_coxa_joint': 0.0,
+            'front_right_femur_joint': 0.0,
+            'front_right_tibia_joint': 0.0,
+            'middle_right_coxa_joint': 0.0,
+            'middle_right_femur_joint': 0.0,
+            'middle_right_tibia_joint': 0.0,
+            'rear_right_coxa_joint': 0.0,
+            'rear_right_femur_joint': 0.0,
+            'rear_right_tibia_joint': 0.0,
+            'rear_left_coxa_joint': 0.0,
+        }
+
+        self.joint_angles_deg = {
             'front_left_coxa_joint': 0.0,
             'front_left_femur_joint': 0.0,
             'front_left_tibia_joint': 0.0,
@@ -153,6 +177,7 @@ class InverseKinematicsNode(Node):
                 cfg["signs"]
             ):
                 self.joint_angles[joint] = sign * angle
+                self.joint_angles_deg[joint] = np.rad2deg(angle)
 
         joint_msg = JointState()
         joint_msg.header.stamp = self.get_clock().now().to_msg()
@@ -166,29 +191,10 @@ class InverseKinematicsNode(Node):
         angle_msg.data = list(self.joint_angles.values())
         self.ik_publisher.publish(angle_msg)
 
-        # #change to degrees
-        # femur_angle_deg = np.rad2deg(femur_angle)  #final femur angle in deg
-        # tibia_angle_deg = np.rad2deg(tibia_angle) #final tibia angle in deg
-        # hip_angle_deg = np.rad2deg(final_hip_angle) #final hip angle in deg
+        deg_angle_msg = Float32MultiArray()
+        deg_angle_msg.data = list(self.joint_angles_deg.values())
+        self.deg_publisher.publish(deg_angle_msg)
 
-        # #update the middle left leg with math
-        # self.joint_angles['middle_left_coxa_joint'] = final_hip_angle
-        # self.joint_angles['middle_left_femur_joint'] = -femur_angle
-        # self.joint_angles['middle_left_tibia_joint'] = tibia_angle
-
-        # #break dictionary into two lists
-        # joint_names = list(self.joint_angles.keys())
-        # joint_positions = list(self.joint_angles.values())
-
-        # #create joint state message and publish
-        # joint_msg = JointState()
-        # # joint_msg.header.stamp = self.get_clock().now()
-        # joint_msg.header.stamp = self.get_clock().now().to_msg()
-        # # joint_msg.header.frame_id = "base_link"
-        # joint_msg.name = joint_names
-        # joint_msg.position = joint_positions
-
-        # self.joint_state_publisher.publish(joint_msg)
 
 def main(args=None):
     rclpy.init(args=args)

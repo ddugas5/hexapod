@@ -28,7 +28,15 @@ def generate_launch_description():
         name="inverse_kinematics_node",
     )
 
+    multi_servo_control_node = Node(
+        package="servo_control",
+        namespace="servo_control",
+        executable="multi_servo_control_node",
+        name="multi_servo_control_node",
+    )
+
     return LaunchDescription([
         robot_state_publisher_node,
         inverse_kinematics_node,
+        multi_servo_control_node,
     ])
