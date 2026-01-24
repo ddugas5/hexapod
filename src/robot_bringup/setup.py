@@ -27,7 +27,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'my_node = robot_bringup.my_node:main'
+            'stand_controller_node = robot_bringup.stand_controller_node:main'
         ],
     },
 )
