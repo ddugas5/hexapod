@@ -20,7 +20,7 @@ class ServoControlNode(Node):
         self.kit = ServoKit(channels=16)
 
         #set the servo channel to the channel you want
-        self.servo_channel = 4
+        self.servo_channel = 0
 
     def angle_callback(self, msg: Float32):
         angle = msg.data    #get data and assign to variable

@@ -13,7 +13,7 @@ class StandControllerNode(Node):
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
-        self.matrix = [[0.0, 5.0, -3.0], [0.0, 5.0, -3.0], [0.0, 5.0, -3.0], [0.0, 5.0, -3.0], [0.0, 5.0, -3.0], [0.0, 5.0, -3.0]]
+        self.matrix = [[0.0, 5.0, -3.0], [0.0, 2.75, -4.0], [0.0, 5.0, -3.0], [0.0, 5.0, -3.0], [0.0, 5.0, -3.0], [0.0, 5.0, -3.0]]
 
     def timer_callback(self):
         msg = Float32MultiArray()

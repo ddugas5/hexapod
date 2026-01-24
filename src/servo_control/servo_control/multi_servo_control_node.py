@@ -82,6 +82,7 @@ def main(args=None):
     multi_servo_control_node.destoy_node()
 
     rclpy.shutdown()
+    pca.sleep()
 
 if __name__ == '__main__':
     main()
