@@ -133,6 +133,7 @@ class InverseKinematicsNode(Node):
 
         #coxa length
         coxa_length = 2.743 #inches
+        # coxa_length = 4
         z_offset = 3.0
 
         #horizontal distance
