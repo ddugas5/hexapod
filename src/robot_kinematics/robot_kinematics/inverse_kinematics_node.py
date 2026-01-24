@@ -34,22 +34,10 @@ class InverseKinematicsNode(Node):
                 "tibia": "front_left_tibia_joint",
                 "signs": [-1, -1, 1]
             },
-            "front_right": {
-                "coxa": "front_right_coxa_joint",
-                "femur": "front_right_femur_joint",
-                "tibia": "front_right_tibia_joint",
-                "signs": [-1, 1, 1]
-            },
             "middle_left": {
                 "coxa": "middle_left_coxa_joint",
                 "femur": "middle_left_femur_joint",
                 "tibia": "middle_left_tibia_joint",
-                "signs": [-1, -1, 1]
-            },
-            "middle_right": {
-                "coxa": "middle_right_coxa_joint",
-                "femur": "middle_right_femur_joint",
-                "tibia": "middle_right_tibia_joint",
                 "signs": [-1, -1, 1]
             },
             "rear_left": {
@@ -57,6 +45,18 @@ class InverseKinematicsNode(Node):
                 "femur": "rear_left_femur_joint",
                 "tibia": "rear_left_tibia_joint",
                 "signs": [1, 1, 1]
+            },
+            "front_right": {
+                "coxa": "front_right_coxa_joint",
+                "femur": "front_right_femur_joint",
+                "tibia": "front_right_tibia_joint",
+                "signs": [-1, 1, 1]
+            },
+            "middle_right": {
+                "coxa": "middle_right_coxa_joint",
+                "femur": "middle_right_femur_joint",
+                "tibia": "middle_right_tibia_joint",
+                "signs": [-1, -1, 1]
             },
             "rear_right": {
                 "coxa": "rear_right_coxa_joint",
@@ -75,6 +75,7 @@ class InverseKinematicsNode(Node):
             'middle_left_coxa_joint': 0.0,
             'middle_left_femur_joint': 0.0,
             'middle_left_tibia_joint': 0.0,
+            'rear_left_coxa_joint': 0.0,
             'rear_left_femur_joint': 0.0,
             'rear_left_tibia_joint': 0.0,
             'front_right_coxa_joint': 0.0,
@@ -86,7 +87,6 @@ class InverseKinematicsNode(Node):
             'rear_right_coxa_joint': 0.0,
             'rear_right_femur_joint': 0.0,
             'rear_right_tibia_joint': 0.0,
-            'rear_left_coxa_joint': 0.0,
         }
 
         self.joint_angles_deg = {
@@ -98,6 +98,7 @@ class InverseKinematicsNode(Node):
             'middle_left_tibia_joint': 0.0,
             'rear_left_femur_joint': 0.0,
             'rear_left_tibia_joint': 0.0,
+            'rear_left_coxa_joint': 0.0,
             'front_right_coxa_joint': 0.0,
             'front_right_femur_joint': 0.0,
             'front_right_tibia_joint': 0.0,
@@ -107,7 +108,6 @@ class InverseKinematicsNode(Node):
             'rear_right_coxa_joint': 0.0,
             'rear_right_femur_joint': 0.0,
             'rear_right_tibia_joint': 0.0,
-            'rear_left_coxa_joint': 0.0,
         }
 
     #function to calculate the tibia angle and femur angle
@@ -159,10 +159,10 @@ class InverseKinematicsNode(Node):
 
         foot_targets = {
             "front_left":   data[0:3],
-            "front_right":  data[3:6],
-            "middle_left":  data[6:9],
-            "middle_right": data[9:12],
-            "rear_left":    data[12:15],
+            "middle_left":  data[3:6],
+            "rear_left":  data[6:9],
+            "front_right": data[9:12],
+            "middle_right":    data[12:15],
             "rear_right":   data[15:18],
         }
 

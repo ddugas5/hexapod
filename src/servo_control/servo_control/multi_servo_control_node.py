@@ -20,12 +20,24 @@ class MultiServoControlNode(Node):
     
         #store all channels, ranges, and whether to invert the servo or not
         self.servos = [
-            {"channel": 0, "servo_min": 50, "servo_max": 120, "min_rad": 0.872665, "max_rad": 2.0944, "invert": False},
-            {"channel": 1, "servo_min": 50, "servo_max": 180, "min_rad": 0.872665, "max_rad": 3.1415, "invert": True},
-            {"channel": 2, "servo_min": 0, "servo_max": 135, "min_rad": 0.0, "max_rad": 2.3561, "invert": False},
+            {"channel": 0, "servo_min": 50, "servo_max": 120, "min_rad": -1.5708, "max_rad": 1.5708, "invert": False}, #front_left_coxa
+            {"channel": 1, "servo_min": 50, "servo_max": 180, "min_rad": -1.5708, "max_rad": 1.5708, "invert": True}, #front_left_femur
+            {"channel": 2, "servo_min": 0, "servo_max": 135, "min_rad": 0.0, "max_rad": 3.1415, "invert": False},      #front_left_tibia
             {"channel": 3, "servo_min": 50, "servo_max": 120, "min_rad": -1.5708, "max_rad": 1.5708, "invert": False},  # middle_left_coxa
             {"channel": 4, "servo_min": 50, "servo_max": 180, "min_rad": -1.5708, "max_rad": 1.5708, "invert": True},   # middle_left_femur
             {"channel": 5, "servo_min": 0, "servo_max": 135, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},        # middle_left_tibia
+            {"channel": 6, "servo_min": 50, "servo_max": 120, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},       #rear_left_coxz
+            {"channel": 7, "servo_min": 50, "servo_max": 180, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},    #rear_left_femur
+            {"channel": 8, "servo_min": 0, "servo_max": 135, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},     #rear_left_tibia
+            {"channel": 9, "servo_min": 50, "servo_max": 120, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},     #front_right_coxa
+            {"channel": 10, "servo_min": 50, "servo_max": 180, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},    #front_right_femur
+            {"channel": 11, "servo_min": 0, "servo_max": 135, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},    #front_right_tibia
+            {"channel": 12, "servo_min": 50, "servo_max": 120, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},    #middle_right_coxa
+            {"channel": 13, "servo_min": 50, "servo_max": 180, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},    #middle_right_femur
+            {"channel": 14, "servo_min": 0, "servo_max": 135, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},   #middle_right_tibia
+            {"channel": 15, "servo_min": 50, "servo_max": 120, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},    #rear_right_coxa
+            {"channel": 16, "servo_min": 50, "servo_max": 180, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},    #rear_right_femur
+            {"channel": 17, "servo_min": 0, "servo_max": 135, "min_rad": 0.0, "max_rad": 3.1415, "invert": True},    #rear_right_tibia
         ]
 
     def angle_callback(self, msg):
