@@ -24,7 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'trajectory_control_node = trajectory_control.trajectory_control_node:main'
+            'trajectory_control_node = trajectory_control.trajectory_control_node:main',
+            'foot_trajectory_controller = trajectory_control.foot_trajectory_controller:main',
         ],
     },
 )
