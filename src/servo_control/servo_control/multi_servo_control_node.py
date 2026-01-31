@@ -32,7 +32,7 @@ class MultiServoControlNode(Node):
             {"channel": 9, "servo_min": 50, "servo_max": 120, "min_rad": -1.5708, "max_rad": 1.5708, "invert": False, "zero_offset_deg": 0.0},     #front_right_coxa
             {"channel": 10, "servo_min": 50, "servo_max": 180, "min_rad": -1.5708, "max_rad": 1.5708, "invert": True, "zero_offset_deg": 0.0},    #front_right_femur
             {"channel": 11, "servo_min": 0, "servo_max": 135, "min_rad": 0.0, "max_rad": 3.1415, "invert": True, "zero_offset_deg": 0.0},    #front_right_tibia
-            {"channel": 12, "servo_min": 50, "servo_max": 120, "min_rad": -1.5708, "max_rad": 1.5708, "invert": False, "zero_offset_deg": 0.0},    #middle_right_coxa
+            {"channel": 12, "servo_min": 50, "servo_max": 120, "min_rad": -1.5708, "max_rad": 1.5708, "invert": True, "zero_offset_deg": 0.0},    #middle_right_coxa
             {"channel": 13, "servo_min": 50, "servo_max": 180, "min_rad": -1.5708, "max_rad": 1.5708, "invert": True, "zero_offset_deg": 0.0},    #middle_right_femur
             {"channel": 14, "servo_min": 0, "servo_max": 135, "min_rad": 0.0, "max_rad": 3.1415, "invert": True, "zero_offset_deg": 25.0},   #middle_right_tibia
             {"channel": 15, "servo_min": 50, "servo_max": 120, "min_rad": -1.5708, "max_rad": 1.5708, "invert": True, "zero_offset_deg": 0.0},    #rear_right_coxa

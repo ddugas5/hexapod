@@ -18,7 +18,7 @@ class FootTrajectoryController(Node):
         self.start_time = time.time()
 
         self.step_height = 2.0 #in
-        self.stride = 2.5
+        self.stride = 3.0
 
         #leg index mapping
         self.tripod_A = [0, 2, 4] #front left, rear left, middle right
