@@ -31,7 +31,7 @@ class FootTrajectoryController(Node):
         self.start_time = time.time()
 
         self.step_height = 2.0 #in
-        self.stride = 2.0
+        self.stride = 3.0
 
         self.vx = 0.0
         self.wz = 0.0
@@ -111,7 +111,8 @@ class FootTrajectoryController(Node):
                     #stance phase
                     s = (leg_phase - 0.5) / 0.5 #again normalize 0 -> 1 for the stance phase time
                     step = self.vx * self.gait_period
-                    x = step / 2 - s * step #linear interpolate the x linear movement for the push along the floor
+                    # x = step / 2 - s * step #linear interpolate the x linear movement for the push along the floor
+                    x = -s * step
                     z = -2.0 #z stays on the ground
 
                 # y = 3.0 #per leg offsets later
