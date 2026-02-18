@@ -52,6 +52,10 @@ class FootTrajectoryController(Node):
         self.stance_start = np.array([2.0, 3.0, -2.0])
         self.stance_end = np.array([-2.0, 3.0, -2.0])
 
+        self.body_height = -2.0
+        self.min_height = -5.0
+        self.max_height = 0.0
+
         #set initial phase and time
         # self.phase = "swing"
         # self.start_time = time.time()
@@ -63,6 +67,15 @@ class FootTrajectoryController(Node):
     def joystick_callback(self, msg):
         self.right_joystick = msg.axes[4]
         self.left_joystick = msg.axes[0]
+        dpad_vertical = msg.axes[7]
+
+        if dpad_vertical > 0.5:
+            self.body_height += 0.05
+
+        elif dpad_vertical < -0.5:
+            self.body_height -= 0.05
+        
+        self.body_height = np.clip(self.body_height, self.min_height, self.max_height)
 
         #scale for increasing speed
         self.vx = self.right_joystick * 3.0
@@ -80,7 +93,7 @@ class FootTrajectoryController(Node):
                 rot_y = bx * np.sin(0) + by * np.cos(0)
                 foot_x = rot_x
                 foot_y = rot_y
-                foot_z = -2.0
+                foot_z = self.body_height
                 targets.extend([foot_x, foot_y, foot_z])
 
         else:
@@ -105,7 +118,7 @@ class FootTrajectoryController(Node):
                     s = leg_phase / 0.5 #normalize it to 0->1 for only the first half of the phase (s=0 is start of swing, s=1 is end of swing)
                     step = self.vx * self.gait_period
                     x = -step / 2 + s * step #linear interpolation for the x linear movement of the swing
-                    z = -2.0 + self.step_height * np.sin(np.pi * s) #z vertical lift in a sin wave from 0 -> pi
+                    z = self.body_height + self.step_height * np.sin(np.pi * s) #z vertical lift in a sin wave from 0 -> pi
 
                 else:
                     #stance phase
@@ -113,7 +126,7 @@ class FootTrajectoryController(Node):
                     step = self.vx * self.gait_period
                     # x = step / 2 - s * step #linear interpolate the x linear movement for the push along the floor
                     x = -s * step
-                    z = -2.0 #z stays on the ground
+                    z = self.body_height #z stays on the ground
 
                 # y = 3.0 #per leg offsets later
                 # targets.extend([x - body_x, y, z]) #append 3D position to the list
@@ -125,14 +138,15 @@ class FootTrajectoryController(Node):
 
                 foot_x = rot_x + x - body_x
                 foot_y = rot_y
+                # foot_x = bx
+                # foot_y = by
                 foot_z = z
 
-                targets.extend([foot_x, foot_y, foot_z])
+                targets.extend([float(foot_x), float(foot_y), float(foot_z)])
 
-
-            msg = Float32MultiArray()
-            msg.data = targets
-            self.goal_publisher.publish(msg)
+        msg = Float32MultiArray()
+        msg.data = targets
+        self.goal_publisher.publish(msg)
 
 def main():
     rclpy.init()
